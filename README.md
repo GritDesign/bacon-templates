@@ -26,4 +26,16 @@ within bacon template expressions.
 Bacon templates try to provide good error information so you can 
 quickly resolve problems in your templates.
 
+## Using with Express
+
+To use bacon templates within Express 3.x within your app.configure
+replace the app.set('view engine', ..) line with the following:
+
+```javascript
+  app.set('view engine', 'html');
+  app.engine(".html", require("bacon-templates").express);
+```
+
+
+
 
