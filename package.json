@@ -1,0 +1,26 @@
+{
+  "author": "Mark Stewart <mark@grit-design.com>",
+  "name": "bacon-templates",
+  "description": "Asynchronous jQuery templates",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "gitolite@git.grit313.com:repo/Grit/NodeModules/bacon-templates"
+  },
+  "engines": {
+    "node": "~0.6.9"
+  },
+  "main": "lib/bacon-templates.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-jsbeautifier": "~0.2.2",
+    "grunt-jasmine-node-coverage": "~0.1.6",
+    "grunt-contrib-jasmine": "~0.5.2"
+  },
+  "optionalDependencies": {},
+  "scripts": {
+    "test": "node tests/test.js"
+  }
+}

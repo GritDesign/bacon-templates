@@ -1,0 +1,49 @@
+[{
+	"description": "can parse empty template",
+	"template": "",
+	"ast": ["template", []],
+	"rendered": ""
+},
+{
+	"description": "can parse a single line template",
+	"template": "\n",
+	"ast": ["template",[["html","\n"]]],
+	"rendered":"\n"
+},
+{
+	"description": "can parse a template with {{html}}",
+	"template": "{{html \"some html\"}}",
+	"ast": ["template",[["tmpl-html",["string", "some html"]]]],
+	"rendered": "some html"
+},
+{
+	"description": "can parse a template with ${}",
+	"template": "${\"test\"}",
+	"ast": ["template",[["tmpl-echo",["string", "test"]]]],
+	"rendered": "some html"
+},
+{
+	"description": "can parse hex numbers",
+	"template": "${0x2344}",
+	"ast": ["template",[["tmpl-echo",["num",9028]]]],
+	"rendered": ""
+},
+{
+	"description": "can parse hex numbers 2",
+	"template": "${0xacdfAcdF}",
+	"ast": ["template",[["tmpl-echo",["num",2900339935]]]],
+	"rendered": ""
+},
+{
+	"description": "can parse exponential numbers",
+	"template": "${5.56789e+5}",
+	"ast": ["template",[["tmpl-echo",["num",556789]]]],
+	"rendered": ""
+},
+{
+	"description": "can parse escaped strings",
+	"template": "${\"\\n\\r\\t\\b\\v\\x0403\\f\\n\"}",
+	"ast": ["template",[["tmpl-echo",["string","\n\r\t\b\u000b\u000403\f\n"]]]],
+	"rendered": ""
+}
+]
