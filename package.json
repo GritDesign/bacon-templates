@@ -2,7 +2,7 @@
   "author": "Mark Stewart <mark@grit-design.com>",
   "name": "bacon-templates",
   "description": "Asynchronous jQuery templates",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "gitolite@git.grit313.com:repo/Grit/NodeModules/bacon-templates"
